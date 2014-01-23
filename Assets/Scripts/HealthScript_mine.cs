@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class HealthScript_mine : MonoBehaviour {
 	public int hp = 2;
