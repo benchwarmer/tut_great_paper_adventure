@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemyScript_mine : MonoBehaviour {
 
-	private WeaponScript[] weapons;
+	private WeaponScript_mine[] weapons;
 	// Use this for initialization
 	void Awake() {
-		weapons = GetComponentsInChildren<WeaponScript>();
+		weapons = GetComponentsInChildren<WeaponScript_mine>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		foreach(WeaponScript weapon in weapons){
+		foreach(WeaponScript_mine weapon in weapons){
 
 			if (weapon != null) {
 				weapon.Attack(true);

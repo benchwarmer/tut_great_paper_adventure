@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ShotScript_mine : MonoBehaviour {
 
@@ -9,11 +8,6 @@ public class ShotScript_mine : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Destroy (gameObject, 20);
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	
 	}
 }

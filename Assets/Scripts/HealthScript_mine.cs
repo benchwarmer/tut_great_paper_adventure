@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class HealthScript_mine : MonoBehaviour {
 	public int hp = 2;
@@ -19,14 +18,5 @@ public class HealthScript_mine : MonoBehaviour {
 			}
 
 		}
-	}
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

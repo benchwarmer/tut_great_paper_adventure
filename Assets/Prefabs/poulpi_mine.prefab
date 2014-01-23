@@ -10,10 +10,10 @@ GameObject:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 212: {fileID: 21200000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: poulpi_mine
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.84362125, y: .314206719, z: 0}
+  m_LocalPosition: {x: 9.85655499, y: -1.91802728, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -122,11 +122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e0fa288cec92b4dbc036333b5c41c9, type: 3}
+  m_Script: {fileID: 11500000, guid: acce6280b34aad74bb7224de371bbaf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 5, y: 0}
-  direction: {x: -1, y: 0}
+  hp: 2
+  isEnemy: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,11 +135,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107bbd265dd9be948b512eaafcae5e6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 756e36c82fe28ad4bacfa489bf8115aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
-  isEnemy: 1
+  speed: {x: 5, y: 10}
+  direction: {x: -1, y: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c286d8bef56cc745a49c0f9e18469a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 58851b76e14376a4a97d1305388184a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: ad75d1a5d57f3db4d98a0f7e556ac852, type: 2}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c286d8bef56cc745a49c0f9e18469a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 58851b76e14376a4a97d1305388184a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 400000, guid: ad75d1a5d57f3db4d98a0f7e556ac852, type: 2}

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PlayerScript_mine : MonoBehaviour {
 	public Vector2 speed = new Vector2(50, 50);
@@ -25,7 +24,7 @@ public class PlayerScript_mine : MonoBehaviour {
 		shoot |= Input.GetButtonDown ("Fire2");
 
 		if (shoot) {
-			WeaponScript weapon = GetComponent<WeaponScript>();
+			WeaponScript_mine weapon = GetComponent<WeaponScript_mine>();
 			if(weapon != null){
 				weapon.Attack(false);
 			}
