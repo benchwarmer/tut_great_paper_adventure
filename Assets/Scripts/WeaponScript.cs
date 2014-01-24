@@ -27,7 +27,7 @@ public class WeaponScript : MonoBehaviour
 
   void Start()
   {
-    shootCooldown = 0f;
+    shootCooldown = Random.Range(0.0f, shootingRate);
   }
 
   void Update()
