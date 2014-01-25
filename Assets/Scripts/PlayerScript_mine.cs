@@ -28,6 +28,7 @@ public class PlayerScript_mine : MonoBehaviour {
 			WeaponScript weapon = GetComponent<WeaponScript>();
 			if(weapon != null){
 				weapon.Attack(false);
+				SoundEffectsHelper.Instance.MakePlayerShotSound();
 			}
 		}
 
