@@ -30,10 +30,6 @@ public class HealthScript : MonoBehaviour
 
         hp -= shot.damage;
 		SoundEffectsHelper.Instance.MakeExplosionSound();
-		
-				StopCoroutine("addHitColor");
-				StartCoroutine("addHitColor");
-
 
        
         if (hp <= 0)
@@ -46,14 +42,5 @@ public class HealthScript : MonoBehaviour
         }
       }
     }
-  }
-
-  public void addHitColor() {
-		SpriteRenderer theSprite = GetComponent<SpriteRenderer>();
-		Color defaultColor = theSprite.color;
-		theSprite.color = Color.red;
-		yield WaitForSeconds(1);
-		theSprite.color = defaultColor;
-
   }
 }
