@@ -13,7 +13,7 @@ public class HealthScript : MonoBehaviour
   /// <summary>
   /// Enemy or player?
   /// </summary>
-  public bool isEnemy = true;
+  public bool isEnemy = true;	
 
   void OnTriggerEnter2D(Collider2D otherCollider)
   {
@@ -24,16 +24,21 @@ public class HealthScript : MonoBehaviour
       // Avoid friendly fire
       if (shot.isEnemyShot != isEnemy)
       {
+		// Destroy the shot
+		Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+
+
         hp -= shot.damage;
+		SoundEffectsHelper.Instance.MakeExplosionSound();
+		
+				StopCoroutine("addHitColor");
+				StartCoroutine("addHitColor");
 
-        // Destroy the shot
-        Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
 
+       
         if (hp <= 0)
         {
           // Explosion!
-          //SpecialEffectsHelper.Instance.Explosion(transform.position);
-          SoundEffectsHelper.Instance.MakeExplosionSound();
 		  SpecialEffectsHelper.Instance.Explosion(transform.position);
 
           // Dead!
@@ -41,5 +46,14 @@ public class HealthScript : MonoBehaviour
         }
       }
     }
+  }
+
+  public void addHitColor() {
+		SpriteRenderer theSprite = GetComponent<SpriteRenderer>();
+		Color defaultColor = theSprite.color;
+		theSprite.color = Color.red;
+		yield WaitForSeconds(1);
+		theSprite.color = defaultColor;
+
   }
 }
