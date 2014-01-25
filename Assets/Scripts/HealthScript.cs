@@ -31,8 +31,8 @@ public class HealthScript : MonoBehaviour
         hp -= shot.damage;
 		SoundEffectsHelper.Instance.MakeExplosionSound();
 		
-				StopCoroutine("addHitColor");
-				StartCoroutine("addHitColor");
+	    StopCoroutine("addHitColor");
+		StartCoroutine("addHitColor");
 
 
        
