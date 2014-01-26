@@ -26,7 +26,7 @@ public class GameOverScript : MonoBehaviour
       ))
     {
       // Reload the level
-      Application.LoadLevel("Stage1");
+      Application.LoadLevel("Stage1-mine");
     }
 
     if (GUI.Button(
@@ -36,7 +36,7 @@ public class GameOverScript : MonoBehaviour
       ))
     {
       // Reload the level
-      Application.LoadLevel("Menu");
+      Application.LoadLevel("Menu_mine");
     }
   }
 }
